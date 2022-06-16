@@ -1,0 +1,12 @@
+@mixin flexbox {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.list{
+@include flexbox;
+flex-direction: column;
+// height: 60px;
+// width: 30px;
+}

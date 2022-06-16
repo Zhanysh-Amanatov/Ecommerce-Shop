@@ -1,0 +1,11 @@
+@use "src/App.scss";
+
+.product_content {
+  @include App.flexbox;
+  justify-content: space-evenly;
+}
+.quantity {
+  @include App.flexbox;
+  justify-content: space-evenly;
+  width: 150px;
+}

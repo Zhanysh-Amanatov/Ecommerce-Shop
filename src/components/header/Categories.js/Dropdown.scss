@@ -1,0 +1,40 @@
+@use "src/App.scss";
+
+.dropdown-btn {
+  @include App.flexbox;
+}
+.arrow-icon {
+  width: 20px;
+}
+.arrow-icon {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.dropdown-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: auto;
+  height: 30vh;
+  position: absolute;
+  color: App.$button-background-color;
+  background-color: #ffffff;
+  padding: 10px;
+  left: 100px;
+  top: 65px;
+}
+.list-item {
+  cursor: pointer;
+  list-style: none;
+  padding: 5px;
+  color: App.$text-color;
+  @include App.flexbox;
+
+  &:hover {
+    color: App.$text-hover-color;
+  }
+}
+.dot-icon {
+  color: App.$button-background-color;
+  font-size: 2rem;
+}

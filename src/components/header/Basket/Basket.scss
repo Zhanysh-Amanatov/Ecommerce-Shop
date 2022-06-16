@@ -1,0 +1,13 @@
+@use "src/App.scss";
+.basket {
+  @include App.flexbox;
+  gap: 5px;
+}
+.counter {
+  height: 34px;
+  width: 27px;
+  border-radius: 11px;
+  background-color: App.$header-search-cart-background;
+  @include App.flexbox;
+  justify-content: center;
+}

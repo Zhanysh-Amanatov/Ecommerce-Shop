@@ -1,0 +1,123 @@
+@use "src/App.scss";
+
+.carousel {
+  background-color: App.$carousel-background-color;
+  height: 90vh;
+}
+.all_content {
+  @include App.flexbox;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+.arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  color: App.$carousel-text-color;
+}
+.arrow:hover {
+  color: #565657;
+}
+.prev {
+  left: 1.5rem;
+}
+.next {
+  right: 1.5rem;
+}
+.slider_info {
+  line-height: 100px;
+  align-items: flex-start;
+  color: App.$carousel-text-color;
+  max-width: 400px;
+}
+.slider_name {
+  font-size: 2.1rem;
+  font-weight:900;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+.slider_description {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+}
+.slider_price_info {
+  @include App.flexbox;
+}
+.slider_price_info_text {
+  font-size: 1.55rem;
+  font-weight: 700px;
+}
+.slider_price_info_price {
+  font-size: 3.75rem;
+  font-weight: 700px;
+  color: App.$text-color;
+  padding-left: 20px;
+}
+.slider_button {
+  @include App.flexbox;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: App.$button-background-color;
+  font-size: 1rem;
+  font-weight: 600;
+  color: App.$button-text-color;
+  cursor: pointer;
+  &:hover {
+    background-color: App.$button-background-hover-color;
+  }
+}
+.slider_image {
+  @include App.flexbox;
+  width: auto;
+  height: 550px;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 375px) and (max-width: 969px) {
+  .carousel {
+    height: auto;
+  }
+  .arrow {
+    width: 1rem;
+    height: 1rem;
+  }
+  .prev {
+    left: 1rem;
+  }
+  .next {
+    right: 1rem;
+  }
+  .slider_info {
+    gap: 17px;
+  }
+  .slider_name {
+    font-size: 1.6rem;
+  }
+  .slider_description {
+    font-size: 1rem;
+  }
+  .slider_price_info_text {
+    font-size: 1rem;
+    font-weight: 600px;
+  }
+  .slider_price_info_price {
+    font-size: 3rem;
+  }
+  .slider_button {
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  .slider_image {
+    height: 300px;
+  }
+}
+@media (max-width: 375px) {
+  .carousel {
+    display: none;
+  }
+}

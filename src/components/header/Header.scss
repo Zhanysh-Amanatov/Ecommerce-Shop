@@ -1,0 +1,29 @@
+@use "src/App.scss";
+
+.header {
+  @include App.flexbox;
+  justify-content: space-around;
+}
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  color: App.$text-color;
+  font-size: 1rem;
+}
+.link:hover {
+  color: App.$text-hover-color;
+}
+@media only screen and (min-width: 375px) and (max-width: 969px) {
+  .link {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .link {
+    font-size: 0.7rem;
+  }
+}

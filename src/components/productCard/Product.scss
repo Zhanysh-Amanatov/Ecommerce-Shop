@@ -1,0 +1,68 @@
+@use "src/App.scss";
+
+.heading {
+  margin-left: 20px;
+}
+.containerWrapper {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  padding: 19.92px;
+  gap: 50px 50px;
+}
+.product {
+  width: 200px;
+  height: auto;
+  @include App.flexbox;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  padding: 10px;
+  cursor: pointer;
+}
+.product_image {
+  height: auto;
+  width: 200px;
+  border-radius: 5px;
+}
+.product_info {
+  @include App.flexbox;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 120px;
+}
+.product_info_name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 20px;
+}
+.product_info_price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 35px;
+}
+.product_button {
+  width: 108px;
+  height: 34px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-radius: 10px;
+  border: none;
+  background-color: App.$button-background-color;
+  color: App.$button-text-color;
+  cursor: pointer;
+  &:hover {
+    background-color: App.$button-background-hover-color;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 969px) {
+  .containerWrapper {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 375px) {
+  .containerWrapper {
+    grid-template-columns: auto;
+  }
+}

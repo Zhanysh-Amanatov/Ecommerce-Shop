@@ -1,0 +1,29 @@
+//Mixins
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+}
+//Variables
+
+// Carousel
+$carousel-background-color: #fafafa;
+$carousel-text-color: #817c7c;
+
+// Buttons
+$button-text-color: #575252;
+$button-background-color: #f9d26f;
+$button-background-hover-color: #edc768;
+
+// Header
+$header-search-cart-background: #e9e3e3;
+
+// Text
+$text-color: #000;
+$text-hover-color: #616060;
+
+.html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}

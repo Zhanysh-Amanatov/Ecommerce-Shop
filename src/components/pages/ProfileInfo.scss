@@ -1,0 +1,35 @@
+@use "src/App.scss";
+
+.formInfo {
+  @include App.flexbox;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: #817c7c;
+  height: 70vh;
+}
+.formInput {
+  width: 300px;
+  padding: 10px;
+  height: 40px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+}
+.formButtonGroup {
+  @include App.flexbox;
+  width: 300px;
+  justify-content: space-between;
+}
+.formButton {
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: App.$button-background-color;
+  color: App.$button-text-color;
+  cursor: pointer;
+  font-weight: 500;
+  &:hover {
+    background-color: App.$button-background-hover-color;
+  }
+}

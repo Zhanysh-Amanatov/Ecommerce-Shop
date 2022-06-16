@@ -1,0 +1,109 @@
+@use "src/App.scss";
+.content {
+  background-color: #515151;
+  color: #ffffff;
+  padding-top: 20px;
+  font-size: 1rem;
+  width: 100%;
+}
+.grid-container {
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+}
+.section {
+  @include App.flexbox;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.linkFooter {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+.linkFooter:hover {
+  color: #8e8c8c;
+}
+.socialMediaIcons {
+  width: 100%;
+  @include App.flexbox;
+  justify-content: space-evenly;
+}
+.emailButtonInput {
+  @include App.flexbox;
+  justify-content: center;
+}
+.inputEmail {
+  width: 250px;
+  height: 36px;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #515151;
+}
+.inputButton {
+  width: 80px;
+  height: 40px;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid #fff;
+  background-color: App.$button-background-color;
+  cursor: pointer;
+}
+.inputButton:hover {
+  background-color: App.$button-background-hover-color;
+}
+.sendLogo {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.sendLogo:hover {
+  color: #8e8c8c;
+}
+.paymentLogos {
+  font-size: 2rem;
+  @include App.flexbox;
+  justify-content: space-between;
+  width: 100%;
+}
+.visaLogo {
+  color: #699bf7;
+}
+.mastercardLogo {
+  color: #ed7429;
+}
+.paypalLogo {
+  color: #27346a;
+}
+.copyright {
+  @include App.flexbox;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 20px;
+}
+@media only screen and (min-width: 375px) and (max-width: 969px) {
+  .content {
+    font-size: 0.8rem;
+  }
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+  .linkFooter {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 375px) {
+  .content {
+    font-size: 0.6rem;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+  .linkFooter {
+    font-size: 0.6rem;
+  }
+  .paymentLogos {
+    justify-content: space-evenly;
+  }
+}

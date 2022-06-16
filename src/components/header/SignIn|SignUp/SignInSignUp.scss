@@ -1,0 +1,6 @@
+@use "src/App.scss";
+
+.signIn_SignUp {
+  @include App.flexbox;
+  gap: 5px;
+}

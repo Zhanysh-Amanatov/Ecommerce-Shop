@@ -1,0 +1,15 @@
+@use "src/App.scss";
+
+.search-form {
+  @include App.flexbox;
+  justify-content: center;
+  gap: 5px;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: App.$header-search-cart-background;
+  cursor: pointer;
+}
+.search-form:hover {
+  background-color: #e1dede;
+}
